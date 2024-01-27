@@ -3,21 +3,20 @@
   "version": "1.0.1-beta.2",
   "description": "description",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "export": {
     ".": {
-      "require": "./dist/index.cjs",
       "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
     "build": "unbuild",
-    "build:deno": "udeno",
     "build:esm": "mkdist -d --dist=dist/es",
-    "build:cjs": "mkdist -d --dist=dist/lib --format=cjs",
+    "build:cjs": "mkdist -d --dist=dist/lib --format=cjs --ext=cjs",
     "dev": "unbuild --watch --stub",
     "clean": "rimraf dist",
     "play": "tsx src/index.tsx",
