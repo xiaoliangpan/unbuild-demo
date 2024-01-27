@@ -17,7 +17,7 @@
     "build": "unbuild",
     "build:esm": "mkdist -d --dist=dist/es",
     "build:cjs": "mkdist -d --dist=dist/lib --format=cjs --ext=cjs",
-    "dev": "unbuild --watch --stub",
+    "dev": "unbuild --stub",
     "clean": "rimraf dist",
     "play": "tsx src/index.tsx",
     "deps:fresh:major": "npx taze major -w",
